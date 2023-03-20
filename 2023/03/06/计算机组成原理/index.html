@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>计算机组成原理 | S1eepingFish</title><meta name="keywords" content="课内学习"><meta name="author" content="S1eepingFish"><meta name="copyright" content="S1eepingFish"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="寄组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机组成原理">
+<meta property="og:url" content="http://example.com/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:site_name" content="S1eepingFish">
+<meta property="og:description" content="寄组">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/favicon.jpg">
+<meta property="article:published_time" content="2023-03-06T14:59:02.000Z">
+<meta property="article:modified_time" content="2023-03-20T15:18:34.229Z">
+<meta property="article:author" content="S1eepingFish">
+<meta property="article:tag" content="课内学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/favicon.jpg"><link rel="shortcut icon" href="/img/loading.JPG"><link rel="canonical" href="http://example.com/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算机组成原理',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-20 23:18:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.JPG" data-original="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about"><i class="fa-fw /about/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myself"><i class="fa-fw /myself/"></i><span> 1</span></a></li><li><a class="site-page child" href="/butterfly"><i class="fa-fw https://github.com/jerryc127/hexo-theme-butterfly/"></i><span> 2</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/favicon.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">S1eepingFish</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 菜单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/about"><i class="fa-fw /about/"></i><span> 0</span></a></li><li><a class="site-page child" href="/myself"><i class="fa-fw /myself/"></i><span> 1</span></a></li><li><a class="site-page child" href="/butterfly"><i class="fa-fw https://github.com/jerryc127/hexo-theme-butterfly/"></i><span> 2</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机组成原理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-06T14:59:02.000Z" title="发表于 2023-03-06 22:59:02">2023-03-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-20T15:18:34.229Z" title="更新于 2023-03-20 23:18:34">2023-03-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E5%86%85%E5%AD%A6%E4%B9%A0/">课内学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="计算机组成原理"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="数据的机器级表示与处理"><a href="#数据的机器级表示与处理" class="headerlink" title="数据的机器级表示与处理"></a>数据的机器级表示与处理</h1><p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678115004490.png" alt="1678115004490"></p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678115027922.png" alt="1678115027922"></p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678115047954.png" alt="1678115047954"></p>
+<h2 id="数据表示基础"><a href="#数据表示基础" class="headerlink" title="数据表示基础"></a>数据表示基础</h2><h3 id="进位计数制"><a href="#进位计数制" class="headerlink" title="进位计数制"></a>进位计数制</h3><p>十进制：符号数多，运算组合状态过多</p>
+<p>二进制：符号数最少，可以表示任何对象，运算规则简单</p>
+<p>r进制转10进制：按权展开</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678115334935.png" alt="1678115334935"></p>
+<p>10进制转r进制：整数部分除2取余，小数部分乘2取整</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678115398640.png" alt="1678115398640"></p>
+<p>进制转换的快速方法</p>
+<p>大数转换方法：记住常用的2的幂</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678115524657.png" alt="1678115524657"></p>
+<p>2的7，8，10（1k)，15，16，20(1m)，30(1g)次方都很常用</p>
+<p>例：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678115887988.png" alt="1678115887988"></p>
+<p>   相应地，2进制转10进制也可以：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678116093056.png" alt="1678116093056"></p>
+<p>二进制转2^m进制：m位一分组，小数部分不足位数要补零凑足                                                                                                                                                                                   </p>
+<h3 id="地址和虚拟地址空间"><a href="#地址和虚拟地址空间" class="headerlink" title="地址和虚拟地址空间"></a>地址和虚拟地址空间</h3><p>多数计算机使用8位的字节作为最小的可寻址存储单元</p>
+<p>机器级程序把存储器看成一个非常大的字节数组，成为虚拟存储器</p>
+<p>存储器为每一个字节都编了一个唯一的地址，所有可能的地址集合被称为虚拟地址空间</p>
+<p>每个计算机都有一个字长，用来指明整数，指针数据的标称大小</p>
+<p>字长为n-bit时，范围是0-2^n-1</p>
+<p>如32位字节长度的计算机，虚拟地址空间的大小是2^32bit,也就是4GB</p>
+<p>除了比特和字节外，还常用字来作为数据表示的单位，表示被处理信息的单位，用来度量数据类型的宽度</p>
+<p>注意：字不是字长，字和字长的宽度可以一样，也可以不同</p>
+<p>字长等于cpu内部总线的宽度，运算器的位数，通用寄存器的宽度等</p>
+<h3 id="寻址和字节顺序"><a href="#寻址和字节顺序" class="headerlink" title="寻址和字节顺序"></a>寻址和字节顺序</h3><p>通常，多字节对象被存储为连续的字节序列，地址是所有字节里最小的地址</p>
+<p>字节排列顺序：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678117429347.png" alt="1678117429347"></p>
+<p>如：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678117576847.png" alt="1678117576847"></p>
+<p>相应地，大端法时，数据为0x01234567，可以看出，大端法和我们的习惯读法一样</p>
+<p>存放方式不同的机器间程序移植时，需要进行顺序转换，音视频图像等文件格式或处理程序也都涉及到字节顺序，如gif是大端法，jpeg是小端法</p>
+<p>同一数据类型在不同位数计算机中可能会占不同的位数：可移植性变差</p>
+<p>解决可移植性问题：typedef或另类的整数类型：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678118011904.png" alt="1678118011904"></p>
+<h3 id="数据容量的度量单位"><a href="#数据容量的度量单位" class="headerlink" title="数据容量的度量单位"></a>数据容量的度量单位</h3><p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678118085866.png" alt="1678118085866"></p>
+<p>注意：通信里的带宽和容量的单位换算不同！</p>
+<h2 id="整数表示"><a href="#整数表示" class="headerlink" title="整数表示"></a>整数表示</h2><p>补码</p>
+<p>对于补码，直接再求一次该补码的补码就是这个数的原码</p>
+<p>快速求解法：对于负数的补码，从右往左，第一个1保留，其余各位按位取反，得到的就是该补码绝对值的二进制表示</p>
+<p>如补码110110：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678118802442.png" alt="1678118802442"></p>
+<p>所以这个数的绝对值是10，这个数是-10</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678118871896.png" alt="1678118871896"></p>
+<h2 id="整数运算实现"><a href="#整数运算实现" class="headerlink" title="整数运算实现"></a>整数运算实现</h2><h3 id="c语言的位运算"><a href="#c语言的位运算" class="headerlink" title="c语言的位运算"></a>c语言的位运算</h3><p>按位与&amp;，按位或|，按位取反~，按位异或^</p>
+<p>可以用在任意的整型数据上</p>
+<p>用途：对位串实现掩码（用于提取某些位的集合）操作，实现对多媒体数据或状态&#x2F;控制信息进行处理等</p>
+<p>巧用还可以实现提高程序性能</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678121554911.png" alt="1678121554911"></p>
+<p>移位运算：向左或向右按位移动n位，空位补零或补符</p>
+<p>用途：提取部分信息，扩大或缩小数值的2，4，8……倍，左移相当于扩大，右移相当于缩小</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678122081007.png" alt="1678122081007"></p>
+<p>无符号数：高位移出的是1，则左移时发生溢出</p>
+<p>有符号数：移出的位不等于新的符号位时，则溢出</p>
+<p>左移：x&lt;&lt;y</p>
+<p>右移：x&gt;&gt;y</p>
+<p>c并不区分是逻辑移位还是算术移位（底层如何判断是哪种移位？由x的数据类型决定）</p>
+<h3 id="位扩展和位截断运算"><a href="#位扩展和位截断运算" class="headerlink" title="位扩展和位截断运算"></a>位扩展和位截断运算</h3><p>c语言内没有专门的运算符，但编译器会根据转换前后数据的长短来确定是扩展还是截断</p>
+<p>扩展：短转长</p>
+<p>无符号数：0扩展，前面补0</p>
+<p>有符号整数：符号扩展，前面补符</p>
+<p>截断：长转短</p>
+<p>强行将高位丢弃，保留低位，所以可能发生溢出</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678123138257.png" alt="1678123138257"></p>
+<h3 id="整数加减运算实现"><a href="#整数加减运算实现" class="headerlink" title="整数加减运算实现"></a>整数加减运算实现</h3><p>回顾数电：串行加法器采用串行逐级传递进位，电路延迟与位数成正比关系，速度慢</p>
+<p>并行进位加法器速度很快，但是连线多，所需驱动大</p>
+<p>所以可以分组，组内并行，组间串行，也可以并行级联</p>
+<p> n位加法器只能用于两个n位二进制数相加，不能进行无符号数的减运算，也不能进行有符号数的加&#x2F;减运算，必须在它的基础上增加其他的逻辑门电路，使得它不但能计算和&#x2F;差，还能生成标志信息（判溢出和生成条件码）</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678971445573.png" alt="1678971445573"></p>
+<p>条件标志(Flag):在运算电路中产生，用于溢出判断或条件判断的位信息，通常被记录到专门的寄存器中（程序&#x2F;状态字寄存器或标志寄存器，如IA-32中的EFLAGS寄存器）</p>
+<p>我们只学4个标志信息：OF,SF,ZF,CF</p>
+<table>
+<thead>
+<tr>
+<th>标志</th>
+<th>SF</th>
+<th>ZF</th>
+<th>OF</th>
+<th>CF</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>标志种类</td>
+<td>符号标志</td>
+<td>零标志</td>
+<td>溢出标志</td>
+<td>进位&#x2F;借位标志</td>
+</tr>
+<tr>
+<td>值</td>
+<td>SF&#x3D;Fn-1</td>
+<td>ZF&#x3D;1当且仅当F&#x3D;0</td>
+<td>OF&#x3D;Cn异或Cn-1</td>
+<td>CF&#x3D;Cout异或Cin</td>
+</tr>
+</tbody></table>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678973326964.png" alt="1678973326964"></p>
+<p>溢出标志OF只是有符号数的溢出标志，无符号数的溢出标志看进位&#x2F;借位标志CF</p>
+<p>即有符号溢出OF&#x3D;1,无符号溢出CF&#x3D;1（机器级语言中判断，即汇编中）</p>
+<p>高级语言溢出判断：无法获得标志位，必须通过程序进行判断，即有符号数正正得负或负负得正的时候说明出现溢出，无符号数的和数小于加数时出现溢出</p>
+<p>出现溢出时的加法运算公式：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678974277057.png" alt="1678974277057"></p>
+<p><strong>整数大小比较时用减法，规则：</strong></p>
+<p><strong>无符号数比较：CF&#x3D;0时，表示大于关系</strong></p>
+<p><strong>有符号数比较：OF&#x3D;SF时，表示大于关系</strong></p>
+<h3 id="ALU的设计原理及构成"><a href="#ALU的设计原理及构成" class="headerlink" title="ALU的设计原理及构成"></a>ALU的设计原理及构成</h3><p>ALU：进行基本算术运算与逻辑运算，包括整数加减运算（不包括浮点数和乘除），与，或，非，左移右移等逻辑运算，核心电路是整数加减运算部件，输出除了和&#x2F;差等，还有标志信息</p>
+<p>ALU的构成：需要一个操作控制端(ALUop)来决定ALU所执行的处理功能，ALUop的位数k决定操作的种类（2的k次方）</p>
+<h3 id="整数的乘除运算实现"><a href="#整数的乘除运算实现" class="headerlink" title="整数的乘除运算实现"></a>整数的乘除运算实现</h3><p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678977189216.png" alt="1678977189216"></p>
+<h4 id="乘法运算规则"><a href="#乘法运算规则" class="headerlink" title="乘法运算规则"></a>乘法运算规则</h4><p>两个n位整数相乘所得的乘机应该有2n位，但是高级语言里经常2个n位整数相乘，结果赋给一个n位整数，即只取2n位乘积里的低n位</p>
+<p>这样会造成乘法溢出漏洞</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678977591069.png" alt="1678977591069"></p>
+<p>乘法指令分无符号整数乘和有符号整数乘两种，实现时有区别：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678978236589.png" alt="1678978236589"></p>
+<p>即输出结果的低n位是相等的</p>
+<p>无符号乘法运算直接正常乘即可</p>
+<p><strong>有符号乘法运算：布斯乘法</strong></p>
+<p>步骤：先改造乘数，再做二进制乘法运算（被乘数不需要改造）</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678979674981.png" alt="1678979674981"></p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678979744777.png" alt="1678979744777"></p>
+<p>当乘上-1的时候，相当于就是求被乘数的补码，如10110100乘-1变成了01001100，高位处则是符号扩展，即乘1&#x2F;-1的结果的最高位是0就补0，是1就补1</p>
+<h4 id="乘法溢出判断"><a href="#乘法溢出判断" class="headerlink" title="乘法溢出判断"></a>乘法溢出判断</h4><p>无符号数：高n位不全为0即溢出</p>
+<p>有符号数：高n位全是0或全是1，且和低n位的最高（符号）位相等时不溢出，否则溢出</p>
+<p>高级语言判溢出：!x||z&#x2F;x&#x3D;&#x3D;y的真假</p>
+<h4 id="变量与常数之间的乘运算"><a href="#变量与常数之间的乘运算" class="headerlink" title="变量与常数之间的乘运算"></a>变量与常数之间的乘运算</h4><p>往往以移位，加减法来代替</p>
+<p>不管是无符号数还是有符号数，即使乘积溢出时，利用移位和加减运算组合的方式得到的结果都是和采用直接相乘的结果是一样的</p>
+<h4 id="整数除运算"><a href="#整数除运算" class="headerlink" title="整数除运算"></a>整数除运算</h4><p>溢出和异常情况：</p>
+<p>1.除数为0时，会发生异常，此时需要调出操作系统中的异常处理程序来处理</p>
+<p>2.最小负数除以-1</p>
+<h4 id><a href="#" class="headerlink" title></a><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678981179706.png" alt="1678981179706"></h4><p>不同原因：编译优化问题，直接除以-1被优化成取负指令neg，所以没有发生除法溢出</p>
+<p><strong>整数除法商也是整数，在不能整除时必须进行舍入，通常朝0方向舍入</strong></p>
+<p>除运算在处理一个变量和一个2的幂次形式的整数相除时，常采用右移运算来实现：</p>
+<p>无符号：逻辑右移</p>
+<p>有符号：算术右移</p>
+<p>但是不能整除的时候，无法实现朝0舍入</p>
+<p>如-14&#x2F;4&#x3D;-3，但直接截断来右移时结果则是-4</p>
+<p>所以遇到不能整除的负整数时应先纠偏，再右移</p>
+<p>如-14&#x2F;4，要右移2位，k&#x3D;2，（-14+2^k-1）&#x2F;4&#x3D;-3</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1678982058207.png" alt="1678982058207"></p>
+<h3 id="浮点数表示"><a href="#浮点数表示" class="headerlink" title="浮点数表示"></a>浮点数表示</h3><p>用科学计数法表示实数：IEEE754标准，用尾数和幂来表示</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1679319365641.png" alt="1679319365641"></p>
+<p>float型：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1679319514571.png" alt="1679319514571"></p>
+<p>double型：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1679319528527.png" alt="1679319528527"></p>
+<p>符号位——-阶码———尾数码</p>
+<p>尾数码直接把小数点后的数字放到尾数码位置即可，后面补0，如1.01的尾数码是0100000……</p>
+<p>阶码：需要移码操作，阶码&#x3D;指数原码+偏置常数Bias(为了防止负指数带来的计算上的麻烦)，**<u>取原码表示</u>**</p>
+<p>float的Bias是127（2^(8-1)-1)</p>
+<p>double的Bias是1023 (2^(11-1)-1)</p>
+<p>以float型为例对IEEE754浮点数的解释：</p>
+<table>
+<thead>
+<tr>
+<th>阶码</th>
+<th>尾数码</th>
+<th>表示</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1-254</td>
+<td>f</td>
+<td>规格化数</td>
+</tr>
+<tr>
+<td>255</td>
+<td>0&#x2F;≠0</td>
+<td>正负无穷&#x2F;非数NaN</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0&#x2F;≠0</td>
+<td>机器数0&#x2F;非规格化数</td>
+</tr>
+</tbody></table>
+<p>规格化数定义：小数点左侧有且仅有一个1</p>
+<p><strong><u>10进制真值到单精度表示转换：</u></strong></p>
+<p>1.将小数点左右的部分分别转为2进制</p>
+<p>2.转成规格化数表示</p>
+<p>3.对号入座，求符号码，阶码，尾数码</p>
+<p>4.化为16进制（如果题目要求）</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1679320909193.png" alt="1679320909193"></p>
+<p><strong><u>单精度表示到10进制真值转换</u></strong></p>
+<p>反过来即可，先根据符号码阶码尾数码求规格化数表示，再将2进制转10进制</p>
+<p>（别忘了阶码要减去偏置常数才是指数）</p>
+<p><strong><u>规格化数表示范围</u></strong></p>
+<p>（以float为例）</p>
+<p>由于规格化数阶码是1-254</p>
+<p>所以最小最大分别为：</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1679321272967.png" alt="1679321272967"></p>
+<p>阶码相差1时，由于尾数有23位，所以两个阶码中间有2^23个状态（或者间隔），即从1.0…0到1.1…1（小数点后23位）</p>
+<p>如2^-126和2^-125中间的间隔为2^-126&#x2F;2^23&#x3D;2^-149,也就是这个区间里相邻两个可表示数相差的距离是2^-149</p>
+<p>随着数值增大，相邻两个可表示数相差的距离也增大，在数轴上也更加稀疏，也就更加不准确</p>
+<p><strong><u>阶码为255时</u></strong></p>
+<p>1.尾数全为0时表示正负无穷</p>
+<p>注意：浮点数运算中，除数为0时结果是正负无穷而不是溢出异常</p>
+<p>2.尾数不为0时表示NaN</p>
+<p><strong><u>阶码为0时</u></strong></p>
+<p>1.尾数全为0时表示正0负0</p>
+<p>2.尾数不全为0时表示非规格化数</p>
+<p>0和1.00……0*2^-126中间有较大的间隔（和往右边的2^-149相比），可以用非规格化数表示，此时间隔也是2^-149</p>
+<p><img src="/img/loading.JPG" data-original="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1679323857102.png" alt="1679323857102"></p>
+<h3 id="浮点数运算"><a href="#浮点数运算" class="headerlink" title="浮点数运算"></a>浮点数运算</h3><p>1</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">S1eepingFish</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">http://example.com/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">S1eepingFish</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AF%BE%E5%86%85%E5%AD%A6%E4%B9%A0/">课内学习</a></div><div class="post_share"><div class="social-share" data-image="/img/favicon.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2022/12/17/ctfshow-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%AE%9E%E6%88%98/"><img class="prev-cover" src="/img/loading.JPG" data-original="/img/favicon.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">ctfshow-文件包含实战</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/09/06/python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E6%8C%96%E6%8E%98%E5%AE%9E%E6%88%98/" title="python数据分析与挖掘实战"><img class="cover" src="/img/loading.JPG" data-original="/img/favicon.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-06</div><div class="title">python数据分析与挖掘实战</div></div></a></div><div><a href="/2022/10/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构"><img class="cover" src="/img/loading.JPG" data-original="/img/favicon.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-03</div><div class="title">数据结构</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.JPG" data-original="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">S1eepingFish</div><div class="author-info__description">一个喜欢摸鱼的ctfer</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">21</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/S1eepingFish"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">博客仍在施工中！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA%E4%B8%8E%E5%A4%84%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">数据的机器级表示与处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%A4%BA%E5%9F%BA%E7%A1%80"><span class="toc-number">1.1.</span> <span class="toc-text">数据表示基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E4%BD%8D%E8%AE%A1%E6%95%B0%E5%88%B6"><span class="toc-number">1.1.1.</span> <span class="toc-text">进位计数制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%B0%E5%9D%80%E5%92%8C%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4"><span class="toc-number">1.1.2.</span> <span class="toc-text">地址和虚拟地址空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E5%9D%80%E5%92%8C%E5%AD%97%E8%8A%82%E9%A1%BA%E5%BA%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">寻址和字节顺序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AE%B9%E9%87%8F%E7%9A%84%E5%BA%A6%E9%87%8F%E5%8D%95%E4%BD%8D"><span class="toc-number">1.1.4.</span> <span class="toc-text">数据容量的度量单位</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.2.</span> <span class="toc-text">整数表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.3.</span> <span class="toc-text">整数运算实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#c%E8%AF%AD%E8%A8%80%E7%9A%84%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-number">1.3.1.</span> <span class="toc-text">c语言的位运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E6%89%A9%E5%B1%95%E5%92%8C%E4%BD%8D%E6%88%AA%E6%96%AD%E8%BF%90%E7%AE%97"><span class="toc-number">1.3.2.</span> <span class="toc-text">位扩展和位截断运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E5%8A%A0%E5%87%8F%E8%BF%90%E7%AE%97%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.3.3.</span> <span class="toc-text">整数加减运算实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ALU%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86%E5%8F%8A%E6%9E%84%E6%88%90"><span class="toc-number">1.3.4.</span> <span class="toc-text">ALU的设计原理及构成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E7%9A%84%E4%B9%98%E9%99%A4%E8%BF%90%E7%AE%97%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.3.5.</span> <span class="toc-text">整数的乘除运算实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97%E8%A7%84%E5%88%99"><span class="toc-number">1.3.5.1.</span> <span class="toc-text">乘法运算规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%98%E6%B3%95%E6%BA%A2%E5%87%BA%E5%88%A4%E6%96%AD"><span class="toc-number">1.3.5.2.</span> <span class="toc-text">乘法溢出判断</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E4%B9%98%E8%BF%90%E7%AE%97"><span class="toc-number">1.3.5.3.</span> <span class="toc-text">变量与常数之间的乘运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E9%99%A4%E8%BF%90%E7%AE%97"><span class="toc-number">1.3.5.4.</span> <span class="toc-text">整数除运算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-number">1.3.5.5.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.3.6.</span> <span class="toc-text">浮点数表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97"><span class="toc-number">1.3.7.</span> <span class="toc-text">浮点数运算</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" title="计算机组成原理"><img src="/img/loading.JPG" data-original="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机组成原理"/></a><div class="content"><a class="title" href="/2023/03/06/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" title="计算机组成原理">计算机组成原理</a><time datetime="2023-03-06T14:59:02.000Z" title="发表于 2023-03-06 22:59:02">2023-03-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/17/ctfshow-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%AE%9E%E6%88%98/" title="ctfshow-文件包含实战"><img src="/img/loading.JPG" data-original="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ctfshow-文件包含实战"/></a><div class="content"><a class="title" href="/2022/12/17/ctfshow-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%AE%9E%E6%88%98/" title="ctfshow-文件包含实战">ctfshow-文件包含实战</a><time datetime="2022-12-17T08:05:18.000Z" title="发表于 2022-12-17 16:05:18">2022-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/02/xxe%E5%85%A5%E9%97%A8/" title="xxe入门"><img src="/img/loading.JPG" data-original="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="xxe入门"/></a><div class="content"><a class="title" href="/2022/12/02/xxe%E5%85%A5%E9%97%A8/" title="xxe入门">xxe入门</a><time datetime="2022-12-02T11:03:48.000Z" title="发表于 2022-12-02 19:03:48">2022-12-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/11/misc%E7%9F%A5%E8%AF%86%E7%82%B9/" title="misc知识点"><img src="/img/loading.JPG" data-original="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="misc知识点"/></a><div class="content"><a class="title" href="/2022/10/11/misc%E7%9F%A5%E8%AF%86%E7%82%B9/" title="misc知识点">misc知识点</a><time datetime="2022-10-11T12:50:26.000Z" title="发表于 2022-10-11 20:50:26">2022-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/05/ctfshow-ssti%E5%AE%9E%E6%88%98/" title="ctfshow-ssti实战"><img src="/img/loading.JPG" data-original="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ctfshow-ssti实战"/></a><div class="content"><a class="title" href="/2022/10/05/ctfshow-ssti%E5%AE%9E%E6%88%98/" title="ctfshow-ssti实战">ctfshow-ssti实战</a><time datetime="2022-10-05T13:44:20.000Z" title="发表于 2022-10-05 21:44:20">2022-10-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/favicon.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By S1eepingFish</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
